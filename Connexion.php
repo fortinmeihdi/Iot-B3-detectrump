@@ -22,4 +22,5 @@ $results = mysqli_query($db, $query);
 if (mysqli_num_rows($results) == 1) {
     $_SESSION['username'] = $email;
     $_SESSION['success'] = "Vous êtes maintenant connecté";
+    <meta http-equiv="refresh" content="5; URL=tab.html">
 ?>
