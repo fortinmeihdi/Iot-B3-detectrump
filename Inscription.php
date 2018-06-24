@@ -19,6 +19,5 @@ $query = "INSERT INTO user (use_mail, use_password)
 mysqli_query($db, $query);
 $_SESSION['username'] = $email;
 $_SESSION['success'] = "Vous êtes maintenant inscrit";
-}
 ?>
 
