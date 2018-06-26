@@ -8,9 +8,9 @@
  */
 
 $servername = "localhost";
-$username = "nom de compte";
-$password = "mot de passe";
-$dbname = "nom database";
+$username = "root";
+$password = "blop";
+$dbname = "trumpbox";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -18,10 +18,10 @@ if ($conn->connect_error) {
     die("Erreur de connexion " . $conn->connect_error);
 }
 
-$mail = "SELECT use_mail FROM user ";
+$mail = "SELECT USE_MAIL FROM USER";
 
-$datesound = "SELECT so_date FROM sound";
+$datesound = "SELECT SO_DATE FROM SOUND";
 
-$datemove = "SELECT mo_date FROM move";
+$datemove = "SELECT MO_DATE FROM MOVE";
 
 $conn->close();

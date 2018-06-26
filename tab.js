@@ -1,4 +1,4 @@
-apiUrl = "http://localhost/trumpbox/api.php";
+apiUrl = "http://localhost/Iot-B3-detectrump/api/api.php";
 boxId = null;
 actualMax = null;
 function toggleDisplay(elmt){
@@ -14,10 +14,13 @@ function getData(param) {
     self = this;
     $.post( apiUrl, param, function( data ) {
         data = JSON.parse(data);
-        move = data.move;
-        sound = data.sound;
-        self.displayRow(sound, 'sound');
-        //self.displayRow(move, 'move');
+	console.log(data);
+	if(data['error']!="true"){
+        	move = data.move;
+        	sound = data.sound;
+        	self.displayRow(sound, 'sound');
+        	self.displayRow(move, 'move');
+	}
     });
 }
 
